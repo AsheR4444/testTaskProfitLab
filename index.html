@@ -36,6 +36,9 @@
               <span>+7391</span><span>2504545</span>
             </a>
           </div>
+          <a href="#" class="header-button" id="menuBtn">
+            <span></span>
+          </a>
         </div>
       </div>
       <!-- /.container -->
@@ -89,13 +92,16 @@
         </div>
       </div>
       <!-- /.container -->
-      <div id="map">
-        <script
-          type="text/javascript"
-          charset="utf-8"
-          async
-          src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A970c4d1ec51d9d641eb8b3d2b534f7fa320a6aa700599239d96651ebd5f7a7d3&amp;width=100%25&amp;height=350&amp;lang=ru_RU&amp;scroll=false"
-        ></script>
+      <div class="map" id="map">
+        <img src="img/svg/pin.svg" alt="pin" />
+        <div class="map-box">
+          <div class="map-box__section">
+            Офис:
+          </div>
+          <div class="map-box__adress">
+            ул. Апрельская, 4
+          </div>
+        </div>
       </div>
     </section>
     <!-- /.section-contacts -->
@@ -141,5 +147,10 @@
     </footer>
     <!-- /.footer -->
     <script src="js/main.js"></script>
+    <script
+      src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=<8c46c226-acea-49cb-874f-6a359f4bda6b
+    >"
+      type="text/javascript"
+    ></script>
   </body>
 </html>

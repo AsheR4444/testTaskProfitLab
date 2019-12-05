@@ -2,7 +2,7 @@
 ymaps.ready(init);
 function init() {
   let map = new ymaps.Map('map', {
-    center: [55.991923665400876, 92.98853461287474],
+    center: [55.99205563460798, 92.98406626455682],
     zoom: 16,
     controls: ['zoomControl'],
     behaviors: []
@@ -15,13 +15,23 @@ function init() {
       balloonContentBody: '<div class="map-box__adress">ул. Апрельская, 4</div>'
     },
     {
-      balloonPanelMaxMapArea: 0 // разрешил balloon выходить за карту
+      iconLayout: 'default#image',
+      iconImageHref: '../img/svg/pin.svg', // ссылка на картинку
+      iconImageSize: [58, 80], // размер картинки
+      iconImageOffset: [-29, -80] // пододвинул pin в нужное место
     }
   );
   map.geoObjects.add(placemark); // добавил placemark на карту
 }
 // == /yandex map ==
 
-// == header-button ==
+// == burger-menu ==
+let menuBtn = document.getElementById('menuBtn');
+let menu = document.querySelector('.burger-menu');
 
-// == /header-button ==
+menuBtn.addEventListener('click', function(event) {
+  event.preventDefault();
+  menu.classList.toggle('burger-menu_active');
+});
+
+// == /burger-menu ==

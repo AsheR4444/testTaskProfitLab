@@ -46,8 +46,6 @@ body {
     justify-content: space-between;
   }
   &-logo {
-    &__img {
-    }
     &__name {
       font-size: 24px;
       margin-left: 20px;
@@ -211,6 +209,8 @@ body {
 
 // == map ==
 .map {
+  height: 400px;
+  position: relative;
   &-box {
     padding: 50px 30px;
     background: #15c660;

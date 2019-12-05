@@ -16,7 +16,7 @@ function init() {
     },
     {
       iconLayout: 'default#image',
-      iconImageHref: '../img/svg/pin.svg', // ссылка на картинку
+      iconImageHref: 'img/svg/pin.svg', // ссылка на картинку
       iconImageSize: [58, 80], // размер картинки
       iconImageOffset: [-29, -80] // пододвинул pin в нужное место
     }

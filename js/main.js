@@ -15,7 +15,6 @@ function init() {
       balloonContentHeader: '<div class="map-box__section">Офис:</div>',
       balloonContentBody: '<div class="map-box__adress">ул. Апрельская, 4</div>'
     },
-    {},
     {
       iconLayout: 'default#imageWithContent',
       iconImageSize: [58, 80], // размер картинки

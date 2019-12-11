@@ -1,0 +1,17 @@
+.map {
+  height: 400px;
+  position: relative; }
+  .map-box {
+    padding: 50px 30px;
+    background: #15c660;
+    max-width: 415px;
+    color: #fff;
+    display: block; }
+    .map-box__section {
+      font-weight: bold;
+      font-size: 20px;
+      line-height: 140%;
+      margin-bottom: 14px; }
+    .map-box__adress {
+      font-size: 40px;
+      line-height: 120%; }

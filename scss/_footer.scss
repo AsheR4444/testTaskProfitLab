@@ -1,0 +1,63 @@
+// == footer ==
+.footer {
+  padding: 60px 0 50px;
+  background: #393e45;
+
+  color: #fff;
+  &-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+  &-links {
+    flex-basis: 50%;
+    &__item {
+      display: block;
+      color: $col-hover;
+      text-decoration: none;
+      margin-bottom: 25px;
+    }
+  }
+  &-rights {
+    flex-basis: 50%;
+    font-size: 13px;
+    line-height: 180%;
+  }
+  &-copyright {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    &__name {
+      font-size: 13px;
+      line-height: 180%;
+      color: #fff;
+    }
+    &__developers {
+      display: flex;
+      align-items: end;
+      span {
+        margin-right: 25px;
+        display: block;
+      }
+    }
+  }
+  @media (max-width: 1024px) {
+    &-wrapper {
+      flex-direction: column;
+    }
+    &-copyright {
+      margin-top: 30px;
+    }
+  }
+  @media (max-width: 450px) {
+    &-links {
+      font-size: 13px;
+    }
+    &-copyright {
+      &__name {
+        margin-bottom: 30px;
+      }
+    }
+  }
+}
+
+// == /footer ==

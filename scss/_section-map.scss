@@ -1,0 +1,37 @@
+// == map ==
+.map {
+  height: 400px;
+  position: relative;
+  &-box {
+    position: absolute;
+    z-index: 3000;
+    left: 26%;
+    padding: 50px 15px;
+    background: #15c660;
+    max-width: 415px;
+    color: #fff;
+    &__section {
+      font-weight: bold;
+      font-size: 20px;
+      line-height: 140%;
+      margin-bottom: 14px;
+    }
+    &__adress {
+      font-size: 40px;
+      line-height: 120%;
+    }
+    @media (max-width: 1200px) {
+      position: static;
+    }
+    @media (max-width: 800px) {
+      margin: auto;
+    }
+    @media (max-width: 400px) {
+      margin-bottom: 30px;
+      &__adress {
+        font-size: 30px;
+      }
+    }
+  }
+}
+// == /map ==

@@ -16,6 +16,11 @@
   }
   &-phone {
     flex-basis: 50%;
+    z-index: 10;
+    &__number {
+      display: block;
+      margin-bottom: 30px;
+    }
   }
   &-mail {
     flex-basis: 50%;
@@ -26,6 +31,10 @@
     color: $col-orange;
     text-decoration: none;
     display: block;
+    transition: 0.5s;
+    &:hover {
+      color: $col-hover;
+    }
   }
   &-socials {
     margin-top: 55px;

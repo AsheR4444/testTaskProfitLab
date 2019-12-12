@@ -3,12 +3,14 @@
   height: 400px;
   position: relative;
   &-box {
-    position: absolute;
+    // position: absolute;
+    // left: 29%;
+    // top: -100px;
     z-index: 3000;
-    left: 26%;
     padding: 50px 15px;
     background: #15c660;
-    max-width: 415px;
+    margin-right: 30px;
+    margin-bottom: -76px;
     color: #fff;
     &__section {
       font-weight: bold;
@@ -20,14 +22,11 @@
       font-size: 40px;
       line-height: 120%;
     }
-    @media (max-width: 1200px) {
-      position: static;
+    @media (max-width: 780px) {
+      margin-right: auto;
+      margin-left: auto;
     }
-    @media (max-width: 800px) {
-      margin: auto;
-    }
-    @media (max-width: 400px) {
-      margin-bottom: 30px;
+    @media (max-width: 500px) {
       &__adress {
         font-size: 30px;
       }

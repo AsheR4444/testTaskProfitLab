@@ -7,13 +7,17 @@
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   }
 }
+@mixin trans {
+  transition: 0.5s;
+}
 // == /mixins ==
 
 // == variables ==
 $col-primary: #2d5793;
 $col-orange: #fe8900;
 $col-hover: #47d2ff;
-$col-green: #15c660;
+$col-green: rgba(21, 198, 96, 1);
+$col-yellow: rgba(255, 241, 117, 1);
 $col-light: #bbe9ff;
 // == /variables ==
 

@@ -1,91 +1,100 @@
-// == burger-menu ==
-.burger-menu {
-  &_active {
-    .burger-menu__nav {
-      right: 0;
-    }
-    .burger-menu__overlay {
-      display: block;
-      background: rgba(0, 0, 0, 0.5);
-    }
-    .burger-menu__button {
-      margin-bottom: 10px;
-      position: fixed;
-
-      right: 35px;
-      top: 30px;
-      background: $col-primary;
-      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-      transition: 0.5s;
-    }
+.mobile-menu {
+  display: none;
+  &_opened {
+    display: block;
+    animation: opacityUp 0.5s ease;
   }
-  &__link {
-    color: #000;
-    text-decoration: none;
-    font-size: 24px;
-    font-weight: bold;
-    letter-spacing: 5px;
+  &__wrapper {
   }
-  &__nav {
-    transition: 0.5s;
+  &__top {
     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    padding: 30px 10px 20px 15px;
-    position: fixed;
-    z-index: 50;
-    height: 100%;
-    background: #fff;
-    right: -100%;
-    border-radius: 10px;
-  }
-  &__overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 30;
+    justify-content: space-between;
+    padding-bottom: 30px;
+    padding-top: 14px;
   }
   &__button {
-    z-index: 150;
-    display: block;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background: $col-hover;
+    width: 30px;
+    height: 30px;
+    border: none;
+    cursor: pointer;
+    background: none;
     position: relative;
-    span,
-    span::before,
-    span::after {
+    &:after,
+    &:before {
+      content: "";
       position: absolute;
       top: 50%;
-      left: 50%;
-      width: 20px;
-      height: 2px;
-      transform: translate(-50%, -50%);
-      background: #000;
+      right: 0;
+      width: 30px;
+      height: 3px;
+      background-color: $col-orange;
+      transition: background-color 0.2s;
     }
-    span {
-      &::before,
-      &::after {
-        content: "";
-        display: block;
-        transition: 0.2s;
-      }
-      &::before {
-        top: -4px;
-      }
-      &::after {
-        top: 6px;
-      }
+    &:after {
+      transform: rotate(-45deg);
     }
-  }
-  @media (min-width: 1200px) {
-    &__button {
-      display: none;
+    &:before {
+      transform: rotate(45deg);
     }
   }
 }
-// == /burger-menu ==
+.nav {
+  background-color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  &__list {
+    list-style: none;
+    padding-bottom: 20px;
+  }
+  p {
+    .nav__contact-value {
+      font-size: 18px;
+    }
+  }
+  a {
+    &:hover {
+      .header__phone-number {
+        color: $col-light;
+      }
+    }
+  }
+  &__link {
+    @include trans;
+    font-size: 26px;
+    color: $col-orange;
+    text-decoration: none;
+    margin-bottom: 30px;
+    display: block;
+    &:hover {
+      color: $col-green;
+    }
+  }
+  &__contacts {
+    background: $col-green;
+    padding: 30px 0;
+    flex-grow: 1;
+  }
+  &__contact {
+    text-decoration: none;
+    color: #fff;
+    font-size: 24px;
+    display: block;
+    margin-bottom: 30px;
+    &-field {
+      display: block;
+      color: $col-yellow;
+      margin-bottom: 10px;
+    }
+    &-value {
+      @include trans;
+      .header__phone-code {
+        color: $col-light;
+      }
+      .header__phone-number {
+        @include trans;
+        font-weight: bold;
+      }
+    }
+  }
+}

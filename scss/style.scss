@@ -27,6 +27,9 @@ body {
   font-size: 16px;
   transition: 0.5s;
 }
+.hidden {
+  overflow: hidden;
+}
 .section {
   &-title {
     font-weight: bold;

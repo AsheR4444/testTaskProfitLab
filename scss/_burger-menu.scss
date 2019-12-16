@@ -3,11 +3,12 @@
   width: 100%;
   transition: 0.4s;
   height: 0;
+  z-index: -1;
   &_opened {
     transition: 0.3s;
     opacity: 1;
-    display: block;
     z-index: 1000;
+    margin-top: 35px;
   }
   &__top {
     display: flex;

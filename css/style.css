@@ -21,6 +21,9 @@ body {
   display: flex;
   flex-direction: column; }
 
+main {
+  margin-top: 50px; }
+
 .hidden {
   overflow: hidden; }
 
@@ -35,12 +38,13 @@ body {
   opacity: 0;
   width: 100%;
   transition: 0.4s;
-  height: 0; }
+  height: 0;
+  z-index: -1; }
   .mobile-menu_opened {
     transition: 0.3s;
     opacity: 1;
-    display: block;
-    z-index: 1000; }
+    z-index: 1000;
+    margin-top: 35px; }
   .mobile-menu__top {
     display: flex;
     justify-content: space-between;
@@ -122,7 +126,11 @@ body {
         font-weight: bold; }
 
 .header {
-  padding: 23px 0; }
+  position: fixed;
+  width: 100%;
+  background: #fff;
+  padding: 23px 0;
+  z-index: 10000; }
   .header-logo, .header-menu, .header-number, .header-wrapper {
     display: flex;
     align-items: center; }

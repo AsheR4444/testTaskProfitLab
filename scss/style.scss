@@ -31,6 +31,9 @@ body {
   display: flex;
   flex-direction: column;
 }
+main {
+  margin-top: 50px;
+}
 .hidden {
   overflow: hidden;
 }

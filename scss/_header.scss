@@ -14,10 +14,17 @@
   &-logo {
     color: #000;
     text-decoration: none;
+    &:hover,
+    &:focus {
+      .header-logo__name {
+        color: gray;
+      }
+    }
     &__name {
       font-size: 24px;
       margin-left: 20px;
       font-weight: bold;
+      transition: 0.2s;
     }
   }
   &-menu {
@@ -25,7 +32,9 @@
       margin-left: 40px;
       color: #000;
       text-decoration: none;
-      &:hover {
+      transition: 0.2s;
+      &:hover,
+      &:focus {
         color: $col-hover;
       }
       &:nth-child(1) {
@@ -37,11 +46,7 @@
     span {
       @include trans;
     }
-    &:hover {
-      span {
-        color: $col-hover;
-      }
-    }
+
     &__code {
       color: $col-hover;
     }
@@ -52,6 +57,12 @@
     &__phone {
       font-size: 24px;
       text-decoration: none;
+      &:hover,
+      &:focus {
+        span {
+          color: $col-hover;
+        }
+      }
     }
   }
   @media (min-width: 1200px) {

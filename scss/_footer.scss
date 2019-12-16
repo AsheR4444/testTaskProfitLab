@@ -2,7 +2,7 @@
 .footer {
   padding: 60px 0 50px;
   background: #393e45;
-
+  flex-grow: 1;
   color: #fff;
   &-wrapper {
     display: flex;
@@ -11,10 +11,15 @@
   &-links {
     flex-basis: 50%;
     &__item {
+      transition: 0.2s;
       display: block;
       color: $col-hover;
       text-decoration: none;
       margin-bottom: 25px;
+      &:hover,
+      &:focus {
+        color: #fff;
+      }
     }
   }
   &-rights {

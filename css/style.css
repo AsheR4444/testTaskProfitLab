@@ -16,7 +16,10 @@
 body {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
-  transition: 0.5s; }
+  transition: 0.5s;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column; }
 
 .hidden {
   overflow: hidden; }
@@ -131,22 +134,24 @@ body {
   .header-logo {
     color: #000;
     text-decoration: none; }
+    .header-logo:hover .header-logo__name, .header-logo:focus .header-logo__name {
+      color: gray; }
     .header-logo__name {
       font-size: 24px;
       margin-left: 20px;
-      font-weight: bold; }
+      font-weight: bold;
+      transition: 0.2s; }
   .header-menu__item {
     margin-left: 40px;
     color: #000;
-    text-decoration: none; }
-    .header-menu__item:hover {
+    text-decoration: none;
+    transition: 0.2s; }
+    .header-menu__item:hover, .header-menu__item:focus {
       color: #47d2ff; }
     .header-menu__item:nth-child(1) {
       margin-left: 0; }
   .header-number span {
     transition: 0.5s; }
-  .header-number:hover span {
-    color: #47d2ff; }
   .header-number__code {
     color: #47d2ff; }
   .header-number__number {
@@ -155,6 +160,8 @@ body {
   .header-number__phone {
     font-size: 24px;
     text-decoration: none; }
+    .header-number__phone:hover span, .header-number__phone:focus span {
+      color: #47d2ff; }
   @media (min-width: 1200px) {
     .header .mobile-menu__button {
       display: none; } }
@@ -190,10 +197,11 @@ body {
     font-size: 40px;
     color: #fe8900;
     text-decoration: none;
-    display: block;
     transition: 0.5s; }
-    .contacts__link:hover {
+    .contacts__link:hover, .contacts__link:focus {
       color: #47d2ff; }
+    .contacts__link:focus {
+      outline: 1px dashed #0000ee; }
   .contacts-socials {
     margin-top: 55px;
     display: flex; }
@@ -207,7 +215,7 @@ body {
       border-radius: 50%;
       padding: 12px 10px;
       text-align: center; }
-      .contacts-socials__item:hover {
+      .contacts-socials__item:hover, .contacts-socials__item:focus {
         background: #47d2ff;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); }
       .contacts-socials__item:nth-child(2) {
@@ -256,6 +264,7 @@ body {
 .footer {
   padding: 60px 0 50px;
   background: #393e45;
+  flex-grow: 1;
   color: #fff; }
   .footer-wrapper {
     display: flex;
@@ -263,10 +272,13 @@ body {
   .footer-links {
     flex-basis: 50%; }
     .footer-links__item {
+      transition: 0.2s;
       display: block;
       color: #47d2ff;
       text-decoration: none;
       margin-bottom: 25px; }
+      .footer-links__item:hover, .footer-links__item:focus {
+        color: #fff; }
   .footer-rights {
     flex-basis: 50%;
     font-size: 13px;

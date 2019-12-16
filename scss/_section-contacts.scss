@@ -30,10 +30,13 @@
     font-size: 40px;
     color: $col-orange;
     text-decoration: none;
-    display: block;
     transition: 0.5s;
-    &:hover {
+    &:hover,
+    &:focus {
       color: $col-hover;
+    }
+    &:focus {
+      outline: 1px dashed rgb(0, 0, 238);
     }
   }
   &-socials {

@@ -55,7 +55,7 @@ body {
     cursor: pointer;
     background: none;
     position: relative; }
-    .mobile-menu__button:hover span, .mobile-menu__button:hover:after, .mobile-menu__button:hover:before {
+    .mobile-menu__button:hover span, .mobile-menu__button:hover:after, .mobile-menu__button:hover:before, .mobile-menu__button:focus span, .mobile-menu__button:focus:after, .mobile-menu__button:focus:before {
       background: #15c660; }
     .mobile-menu__button span, .mobile-menu__button:after, .mobile-menu__button:before {
       content: "";
@@ -88,7 +88,7 @@ body {
     padding-bottom: 20px; }
   .nav p .nav__contact-value {
     font-size: 18px; }
-  .nav a:hover .header__phone-number {
+  .nav a:hover .header__phone-number, .nav a:focus .header__phone-number {
     color: #bbe9ff; }
   .nav__link {
     transition: 0.5s;
@@ -97,7 +97,7 @@ body {
     text-decoration: none;
     margin-bottom: 30px;
     display: block; }
-    .nav__link:hover {
+    .nav__link:hover, .nav__link:focus {
       color: #15c660; }
   .nav__contacts {
     background: #15c660;

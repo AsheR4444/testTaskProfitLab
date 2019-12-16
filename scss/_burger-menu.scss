@@ -25,7 +25,8 @@
     cursor: pointer;
     background: none;
     position: relative;
-    &:hover {
+    &:hover,
+    &:focus {
       span,
       &:after,
       &:before {
@@ -79,7 +80,8 @@
     }
   }
   a {
-    &:hover {
+    &:hover,
+    &:focus {
       .header__phone-number {
         color: $col-light;
       }
@@ -92,7 +94,8 @@
     text-decoration: none;
     margin-bottom: 30px;
     display: block;
-    &:hover {
+    &:hover,
+    &:focus {
       color: $col-green;
     }
   }
